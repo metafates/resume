@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=0.75cm, vmargin=0cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+
+% Name & headline
+% \heading{Vadim Zbarashchenko}{Lorem ipsum dolor sit amet, \\ consectetur adipiscing elit.}
+
+\heading{Vadim Zbarashchenko}{Backend Developer}
+
+\bigskip
+
+Enthusiast. Experienced in UNIX systems. Keen on making process automation more efficient. Passionate about developing software that makes lives better worldwide. Have a system view of software development process.
+
+\switchcolumn
+
+% Identity card
+\vspace{0.01\textheight}
+\begin{supertabular}{ll}
+  \footnotesize\faPhone & \href{tel:+79266708867}{+7 926 670 88 67} \\
+  \footnotesize\faEnvelope & \href{mailto:john.doe@gmail.com}{vvz.dev@gmail.com} \\
+  \footnotesize\faPaperPlane &
+  \href{https://t.me/metafates}{t.me/metafates}\\
+  \footnotesize\faGithub & \href{https://github.com/metafates}{github.com/metafates} \\
+\end{supertabular}
+
+\bigskip
+\switchcolumn*
+
+\section{education}
+
+\medskip
+
+\entry{Innopolis University}{Computer Science}{Innopolis, Russia}{2021 -- 2025}
+
+\begin{multicols}{2}
+    \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+  \item[-] Networks
+  \item[-] Data Structures \& Algorithms
+  \item[-] Databases
+  \item[-] Operating Systems
+  \item[-] DevOps
+    \end{itemize}
+\end{multicols}
+
+\switchcolumn
+
+\section{skills}
+\begin{supertabular}{rl}
+  \tableentry{\footnotesize\faCode}{Go \textperiodcentered{} Rust \textperiodcentered{} Python \textperiodcentered{} Docker}{}
+  \tableentry{}{Lua \textperiodcentered{} JavaScript \textperiodcentered{} Nix}{}
+  \tableentry{}{Git \textperiodcentered{} Linux \textperiodcentered{} Shell}{}
+  \tableentry{}{GitHub Actions \textperiodcentered{} REST \textperiodcentered{} GraphQL}{}
+  \tableentry{}{MongoDB}{}
+  \tableentry{}{Text Processing \textperiodcentered{} Web Scraping}{}
+  \tableentry{}{}{}
+
+  \tableentry{\footnotesize\faSmileBeam[regular]}{Conflict Resolution \textperiodcentered{} Flexibility}{}
+  \tableentry{}{Teamwork \textperiodcentered{} Engagement}{}
+  \tableentry{}{}{}
+
+  \tableentry{\footnotesize\faLanguage}{English \textperiodcentered{} B2}{}
+\end{supertabular}
+
+\switchcolumn
+
+\section{experience}
+
+\entry{Innopolis}{Backend Developer}{Innopolis, 2023}{Python, FastAPI, Docker}
+
+\begin{flushleft}
+    \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+        \item Developed backend server to improve Innopolis University room booking service backed by Microsoft Outlook API.
+        \item Outperformed existing system
+        \item Implemented additional functionality.
+    \end{itemize}
+\end{flushleft}
+
+\medskip
+
+\entry{Advanced Web Scraper Project}{Developer}{2022}{Go, Lua, Web Scraping, Image processing, CLI}
+
+\begin{flushleft}
+    \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+        \item Identified the problem with existing open-source solutions and developed web scraping program for comic sites with Lua extension-based architecture.
+        \item 700+ stars on GitHub
+        \item 10000+ downloads.
+    \end{itemize}
+\end{flushleft}
+
+\medskip
+
+\entry{Document Converter Project}{Developer}{2022}{Rust, Websockets, CLI}
+
+\begin{flushleft}
+    \begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+        \item Investigated the lack of open-source programs for converting Markdown documents into portable HTML pages with embed images and live preview.
+        \item Resulting app made process of submitting university assignments more productive.
+    \end{itemize}
+\end{flushleft} 
+
+\switchcolumn
+
+\section{awards}
+\begin{supertabular}{rl}
+  \tableentry{2023}{\textbf{Winner}}{}
+  \tableentry{}{Open-Source Projects Contest}{spaceafter}
+\end{supertabular}
+
+\medskip
+
+\section{other interests}
+\begin{supertabular}{rl}
+  \tableentry{Tech}{Open Source \textperiodcentered{} Linux}{spaceafter}
+  \tableentry{}{Reproducible Systems}{}
+  \tableentry{}{}{}
+  \tableentry{Sport}{Swimming \textperiodcentered{} Workout}{spaceafter}
+  \tableentry{}{}{}
+  \tableentry{Other}{Foreign Languages}{}
+\end{supertabular}
+
+\medskip
+
+% \section{other projects}
+
+% \begin{flushleft}
+%     I am actively engaging with other developers on GitHub. Other projects are available there.
+% \end{flushleft}
+
+\end{paracol}
+
+\vspace*{\fill}
+
+\end{document}
